@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/audit-logs",
+      "handler": "audit-log.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/audit-logs/count",
+      "handler": "audit-log.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/audit-logs/:id",
+      "handler": "audit-log.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/audit-logs",
+      "handler": "audit-log.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/audit-logs/:id",
+      "handler": "audit-log.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/audit-logs/:id",
+      "handler": "audit-log.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "audit_logs",
+  "info": {
+    "name": "Audit Log",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "input": {
+      "type": "json",
+      "required": true
+    },
+    "result": {
+      "type": "json",
+      "required": true
+    },
+    "user": {
+      "plugin": "admin",
+      "model": "user"
+    },
+    "action": {
+      "type": "enumeration",
+      "enum": [
+        "create",
+        "update",
+        "delete",
+        "publish",
+        "unpublish"
+      ],
+      "required": true
+    },
+    "model": {
+      "type": "string",
+      "required": true
+    },
+    "entry_id": {
+      "type": "integer"
+    }
+  }
+}
